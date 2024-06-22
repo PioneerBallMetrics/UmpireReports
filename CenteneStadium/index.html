@@ -3,6 +3,21 @@
 <head>
     <title>Centene Stadium Reports</title>
     <style>
+        body {
+            background: url('images/PioneerLeaguePhoto.png') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Adjust the opacity here (0.5 for 50% opacity) */
+            z-index: 0;
+        }
         #navMenu {
             width: 15%; /* Set the desired width */
             height: 100vh;
