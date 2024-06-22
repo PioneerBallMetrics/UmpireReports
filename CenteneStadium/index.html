@@ -42,7 +42,7 @@
             height: 100vh;
             overflow: auto;
             position: fixed;
-            left: 0;
+            ltop: 50px; /* Start below the top bar */
             top: 0;
             padding: 1em;
             background-color: #5B7F95;
@@ -71,9 +71,18 @@
         .indent {
             margin-left: 20px; /* Adjust the indent as needed */
         }
+        .confusion-matrix {
+            max-width: 100%; /* Ensure the image does not exceed its container */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove any residual inline attributes */
+            margin-top: 10px; /* Add space above the image */
+        }
     </style>
 </head>
 <body>
+    <div id="topBar">
+        <h1>Welcome to Umpire Reports</h1>
+    </div>
     <div id="navMenu">
         <h2><a href="https://pioneerballmetrics.github.io/UmpireReports/index.html" style="color: #FFFFFF; text-decoration: none;">Centene Stadium Reports</a></h2>
         <a href="UmpireReportCenteneStadium5-21-24.html">May 21, 2024</a><br>
@@ -94,3 +103,4 @@
     </div>
 </body>
 </html>
+
