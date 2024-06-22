@@ -2,14 +2,46 @@
 <html>
 <head>
     <title>Dehler Park Reports</title>
+    <style>
+        #navMenu {
+            width: 15%; /* Set the desired width */
+            height: 100vh;
+            overflow: auto;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 1em;
+            background-color: #5B7F95;
+        }
+        #content {
+            margin-left: 18%; /* Adjust the margin to match the menu width */
+            padding: 1em;
+        }
+        #navMenu h2 {
+            color: #FFFFFF; /* White color for the heading */
+        }
+        #navMenu a {
+            color: #FFFFFF; /* White color for the links */
+            text-decoration: none; /* Removes underline from links */
+            line-height: 1.5em; /* Adds some space between links */
+        }
+        #navMenu a:hover {
+            color: #B87333; /* Copper color when hovering over links, for contrast */
+        }
+    </style>
 </head>
 <body>
-    <h1>Dehler Park Reports</h1>
+    <div id="navMenu">
+    <h2><a href="https://pioneerballmetrics.github.io/UmpireReports/index.html" style="color: #FFFFFF; text-decoration: none;">Dehler Park Reports</a></h2>
   <a href="UmpireReportDehlerPark5-28-24.html">May 28, 2024</a><br>
   <a href="UmpireReportDehlerPark5-29-24.html">May 29, 2024</a><br>
   <a href="UmpireReportDehlerPark5-30-24.html">May 30, 2024</a><br>
   <a href="UmpireReportDehlerPark5-31-24.html">May 31, 2024</a><br>
   <a href="UmpireReportDehlerPark6-1-24.html">June 1, 2024</a><br>
   <a href="UmpireReportDehlerPark6-2-24.html">June 2, 2024</a><br>
+</div>
+<div id="content">
+    <!-- Your content goes here -->
+</div>
 </body>
 </html>
