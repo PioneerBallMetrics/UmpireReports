@@ -1,7 +1,28 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Centene Stadium Reports</title>
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body {
+            background: url('images/PioneerLeaguePhoto.png') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            z-index: 0;
+        }
         #navMenu {
             width: 15%; /* Set the desired width */
             height: 100vh;
@@ -11,10 +32,15 @@
             top: 0;
             padding: 1em;
             background-color: #5B7F95;
+            z-index: 1;
         }
         #content {
             margin-left: 18%; /* Adjust the margin to match the menu width */
             padding: 1em;
+            padding-top: 60px; /* Add space for the top bar */
+            z-index: 1;
+            position: relative;
+            color: #FFFFFF; /* Text color for content */
         }
         #navMenu h2 {
             color: #FFFFFF; /* White color for the heading */
@@ -26,6 +52,15 @@
         }
         #navMenu a:hover {
             color: #B87333; /* Copper color when hovering over links, for contrast */
+        }
+        .indent {
+            margin-left: 20px; /* Adjust the indent as needed */
+        }
+        .confusion-matrix {
+            max-width: 100%; /* Ensure the image does not exceed its container */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove any residual inline attributes */
+            margin-top: 10px; /* Add space above the image */
         }
     </style>
 </head>
@@ -50,4 +85,3 @@
     </div>
 </body>
 </html>
-
