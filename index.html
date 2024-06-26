@@ -58,10 +58,11 @@
             color: #FFFFFF; /* Text color for content */
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Make the content at least 100vh tall */
+            height: calc(100vh - 60px); /* Subtract top bar height from 100vh */
         }
-        #content p {
+        #mainContent {
             flex: 1; /* Allow the paragraph to take up available space */
+            overflow-y: auto;
         }
         #navMenu h2 {
             color: #FFFFFF; /* White color for the heading */
@@ -89,12 +90,20 @@
             max-width: 300px;  /* Adjust size as needed */
             height: auto;
             display: block;
+            box-shadow: 0 0 10px rgba(255,255,255,0.5);  /* Optional: adds a glow effect */
         }
         .footer-text {
             margin-top: 20px;
             padding-top: 20px;
             border-top: 1px solid #ccc;
             font-style: italic;
+        }
+        #bottomImage {
+            position: absolute;
+            bottom: 20px;  /* Adjust as needed */
+            left: 0;
+            width: 100%;
+            text-align: center;  /* Center the image horizontally */
         }
     </style>
 </head>
@@ -121,15 +130,17 @@
         </div>
     </div>
     <div id="content">
-        <p><strong>Things to remember when reviewing umpire reports</strong><br>
-            1. TrackMan tracks the center of the ball. The data points on the charts represent our best approximation of a baseball relative to the size of the strike zone.<br>
-            2. Confusion Matrix<br>
-                - True Strike: These are the pitches where the umpire calls a strike and it is really a strike.<br>
-                - True Ball: These are the pitches where the umpire calls a ball and it is really a ball.<br>
-                - False Strike: These are the pitches where the umpire calls a strike, but it's actually a ball. (This is a type I error for you stats nerds.)<br>
-                - False Ball: These are the pitches where the umpire calls a ball, but it's actually a strike. (Yes this is a type II error you nerd.)<br>
-            3. Umpire score is the percent of correct (as determined by TrackMan) calls by the umpire.<br>
-        </p>
+        <div id="mainContent">
+            <p><strong>Things to remember when reviewing umpire reports</strong><br>
+                1. TrackMan tracks the center of the ball. The data points on the charts represent our best approximation of a baseball relative to the size of the strike zone.<br>
+                2. Confusion Matrix<br>
+                    - True Strike: These are the pitches where the umpire calls a strike and it is really a strike.<br>
+                    - True Ball: These are the pitches where the umpire calls a ball and it is really a ball.<br>
+                    - False Strike: These are the pitches where the umpire calls a strike, but it's actually a ball. (This is a type I error for you stats nerds.)<br>
+                    - False Ball: These are the pitches where the umpire calls a ball, but it's actually a strike. (Yes this is a type II error you nerd.)<br>
+                3. Umpire score is the percent of correct (as determined by TrackMan) calls by the umpire.<br>
+            </p>
+        </div>
         <div id="bottomImage">
             <span class="indent">
                 <a href="images/ConfusionMatrix.png" target="_blank">
