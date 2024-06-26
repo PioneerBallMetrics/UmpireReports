@@ -56,6 +56,12 @@
             z-index: 1;
             position: relative;
             color: #FFFFFF; /* Text color for content */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Make the content at least 100vh tall */
+        }
+        #content p {
+            flex: 1; /* Allow the paragraph to take up available space */
         }
         #navMenu h2 {
             color: #FFFFFF; /* White color for the heading */
@@ -83,7 +89,6 @@
             max-width: 300px;  /* Adjust size as needed */
             height: auto;
             display: block;
-            box-shadow: 0 0 10px rgba(255,255,255,0.5);  /* Optional: adds a glow effect */
         }
         .footer-text {
             margin-top: 20px;
