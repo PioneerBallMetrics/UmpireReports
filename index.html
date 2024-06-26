@@ -57,12 +57,27 @@
             position: relative;
             color: #FFFFFF; /* Text color for content */
             display: flex;
-            flex-direction: column;
+            flex-direction: row; /* Change to row to align items horizontally */
             height: calc(100vh - 60px); /* Subtract top bar height from 100vh */
         }
+        
         #mainContent {
             flex: 1; /* Allow the paragraph to take up available space */
             overflow-y: auto;
+            padding-right: 20px; /* Add some space between text and image */
+        }
+        
+        #sideImage {
+            width: 300px; /* Adjust as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .confusion-matrix {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
         #navMenu h2 {
             color: #FFFFFF; /* White color for the heading */
@@ -86,28 +101,12 @@
         .indent {
             margin-left: 20px; /* Adjust the indent as needed */
         }
-        .confusion-matrix {
-            max-width: 300px;  /* Adjust size as needed */
-            height: auto;
-            display: block;
-        }
         .footer-text {
             margin-top: 20px;
             padding-top: 20px;
             border-top: 1px solid #ccc;
             font-style: italic;
         }
-        #bottomImage {
-            position: absolute;
-            bottom: 20px;  /* Adjust as needed */
-            left: 0;
-            width: 100%;
-            text-align: center;  /* Center the image horizontally */
-        }
-        p {
-            line-height: 2; /* Adjust this value to add more or less space between lines */
-        }
-
     </style>
 </head>
 <body>
@@ -144,12 +143,10 @@
                 3. Umpire score is the percent of correct (as determined by TrackMan) calls by the umpire.<br>
             </p>
         </div>
-        <div id="bottomImage">
-            <span class="indent">
-                <a href="images/ConfusionMatrix.png" target="_blank">
-                    <img src="images/ConfusionMatrix.png" alt="Confusion Matrix" class="confusion-matrix">
-                </a>
-            </span>
+        <div id="sideImage">
+            <a href="images/ConfusionMatrix.png" target="_blank">
+                <img src="images/ConfusionMatrix.png" alt="Confusion Matrix" class="confusion-matrix">
+            </a>
         </div>
     </div>
 </body>
