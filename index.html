@@ -79,11 +79,18 @@
         .indent {
             margin-left: 20px; /* Adjust the indent as needed */
         }
+        #bottomImage {
+            position: fixed;
+            bottom: 20px;  /* Adjust as needed */
+            right: 20px;   /* Adjust as needed */
+            z-index: 2;    /* Ensure it's above other content */
+        }
+        
         .confusion-matrix {
-            max-width: 100%; /* Ensure the image does not exceed its container */
-            height: auto; /* Maintain aspect ratio */
-            display: block; /* Remove any residual inline attributes */
-            margin-top: 10px; /* Add space above the image */
+            max-width: 300px;  /* Adjust size as needed */
+            height: auto;
+            display: block;
+            box-shadow: 0 0 10px rgba(255,255,255,0.5);  /* Optional: adds a glow effect */
         }
         .footer-text {
             margin-top: 20px;
@@ -124,13 +131,15 @@
                 - False Strike: These are the pitches where the umpire calls a strike, but it's actually a ball. (This is a type I error for you stats nerds.)<br>
                 - False Ball: These are the pitches where the umpire calls a ball, but it's actually a strike. (Yes this is a type II error you nerd.)<br>
             3. Umpire score is the percent of correct (as determined by TrackMan) calls by the umpire.<br>
+            <div id="bottomImage">
                 <span class="indent">
                     <a href="images/ConfusionMatrix.png" target="_blank">
-                    <img src="images/ConfusionMatrix.png" alt="Confusion Matrix" style="width:300px; height:auto;">
+                        <img src="images/ConfusionMatrix.png" alt="Confusion Matrix" class="confusion-matrix">
                     </a>
-                </span><br>
+                </span>
+            </div>
+        </div>
         </p>
-    </div>
 </body>
 </html>
 
