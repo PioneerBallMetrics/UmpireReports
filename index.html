@@ -12,7 +12,6 @@
             background: url('images/PioneerLeaguePhoto.png') no-repeat center center fixed;
             background-size: 50% auto;
             position: relative;
-            box-shadow: none;
         }
         body::before {
             content: '';
@@ -21,7 +20,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
             z-index: 0;
         }
         #topBar {
@@ -60,8 +59,6 @@
             display: flex;
             flex-direction: row; /* Align items horizontally */
             height: calc(100vh - 60px); /* Subtract top bar height from 100vh */
-            font-weight: 600;
-            font-size: 1.1em;
         }
         
         #mainContent {
@@ -79,9 +76,6 @@
             top: 60px; /* Aligns with bottom of top bar */
             right: 20px; /* Adjust for desired distance from right edge */
             padding-top: 10px; /* Small gap from top bar */
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
         }
         
         .confusion-matrix {
