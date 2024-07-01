@@ -50,20 +50,20 @@
             border-right: 3px solid #AD7C59; /* Thin line separating sidebar */
         }
         #content {
-            margin-left: 18%; /* Adjust the margin to match the menu width */
+            margin-left: 18%;
             padding: 1em;
-            padding-top: 60px; /* Add space for the top bar */
+            padding-top: 60px;
             z-index: 1;
             position: relative;
-            color: #FFFFFF; /* Text color for content */
+            color: #FFFFFF;
             display: flex;
-            flex-direction: row; /* Align items horizontally */
-            height: calc(100vh - 60px); /* Subtract top bar height from 100vh */
+            flex-direction: row;
+            height: calc(100vh - 60px);
+            overflow-y: auto;
         }
         
         #mainContent {
             flex: 1;
-            overflow-y: auto;
             padding-right: 320px; /* Width of sideImage plus some extra space */
             p {
             line-height: 1.6; /* Adjust this value to increase or decrease spacing */
