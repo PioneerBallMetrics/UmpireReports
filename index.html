@@ -61,6 +61,7 @@
             height: calc(100vh - 60px);
             overflow-y: auto;
         }
+        
         #mainContent {
             flex: 1;
             padding-right: 320px; /* Width of sideImage plus some extra space */
@@ -72,10 +73,10 @@
         }
         
         #sideImage {
-            width: 20px; /* Adjust as needed */
-            position: sticky;
+            width: 300px; /* Adjust as needed */
+            position: fixed;
             top: 60px; /* Aligns with bottom of top bar */
-            align-self: flex-start;
+            right: 20px; /* Adjust for desired distance from right edge */
             padding-top: 10px; /* Small gap from top bar */
         }
         
