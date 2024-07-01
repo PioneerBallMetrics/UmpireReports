@@ -58,7 +58,7 @@
             color: #FFFFFF;
             display: flex;
             flex-direction: row;
-            height: calc(100vh - 60px);
+            justify-content: space-between;
             overflow-y: auto;
         }
         
@@ -74,9 +74,9 @@
         
         #sideImage {
             width: 300px; /* Adjust as needed */
-            position: fixed;
+            position: sticky;
             top: 60px; /* Aligns with bottom of top bar */
-            right: 20px; /* Adjust for desired distance from right edge */
+            align-self: flex-start;
             padding-top: 10px; /* Small gap from top bar */
         }
         
