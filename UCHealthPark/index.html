@@ -6,6 +6,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            overflow: hidden;
         }
         body {
             background: url('../images/PioneerBaseballLogo.jpg') no-repeat center center fixed;
@@ -19,14 +20,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            background: rgba(0, 0, 0, 0.5);
             z-index: 0;
         }
-        body, html {
-        height: 100%;
-        overflow: hidden; /* Prevent scrolling on the main body */
-        }
-       #topBar {
+        #topBar {
             position: fixed;
             top: 0;
             left: 0;
@@ -40,40 +37,54 @@
             color: #FFFFFF;
         }
         #navMenu {
-            width: 15%; /* Set the desired width */
+            width: 15%;
             position: fixed;
-            top: 50px; /* Start just below the top bar */
+            top: 50px;
             left: 0;
-            bottom: 0; /* Extend to the bottom of the viewport */
+            bottom: 0;
             padding: 1em;
             background-color: #5B7F95;
             z-index: 1;
-            border-right: 3px solid #AD7C59; /* Thin line separating sidebar */
-            overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
+            border-right: 3px solid #AD7C59;
+            overflow-y: auto;
+            box-sizing: border-box;
         }
-        
         #content {
-            margin-left: 17%; /* Adjust to slightly more than the navMenu width */
+            margin-left: 17%;
             padding: 1em;
-            padding-top: 60px; /* Add space for the top bar */
-            z-index: 1;
+            padding-top: 60px;
+            height: calc(100% - 50px);
+            overflow-y: auto;
+            box-sizing: border-box;
             position: relative;
-            color: #FFFFFF; /* Text color for content */
+            z-index: 1;
+            color: #FFFFFF;
         }
         #navMenu h2 {
-            color: #FFFFFF; /* White color for the heading */
-            margin-top: 30px; /* Adjust the margin to move it down */
+            color: #FFFFFF;
+            margin-top: 30px;
         }
         #navMenu a {
-            color: #FFFFFF; /* White color for the links */
-            text-decoration: none; /* Removes underline from links */
-            line-height: 1.5em; /* Adds some space between links */
+            color: #FFFFFF;
+            text-decoration: none;
+            line-height: 1.5em;
+            display: block;
+            margin-bottom: 5px;
         }
         #navMenu a:hover {
-            color: #B87333; /* Copper color when hovering over links, for contrast */
+            color: #B87333;
         }
         .indent {
-            margin-left: 20px; /* Adjust the indent as needed */
+            margin-left: 20px;
+        }
+        .month-group {
+            margin-bottom: 20px;
+        }
+        .month-heading {
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            color: #FFFFFF;
         }
     </style>
 </head>
@@ -82,50 +93,62 @@
         <h1><a href="https://pioneerballmetrics.github.io/UmpireReports/index.html" style="color: #FFFFFF; text-decoration: none;">UC Health Park Reports</a></h1>
     </div>
     <div id="navMenu">
-        <a href="UmpireReportUCHealthPark5-28-24.html">May 28, 2024</a><br>
-        <a href="UmpireReportUCHealthPark5-29-24.html">May 29, 2024</a><br>
-        <a href="UmpireReportUCHealthPark5-30-24.html">May 30, 2024</a><br>
-        <a href="UmpireReportUCHealthPark5-31-24.html">May 31, 2024</a><br>
-        <a href="UmpireReportUCHealthPark6-1-24.html">June 1, 2024</a><br>
-        <a href="UmpireReportUCHealthPark6-2-24.html">June 2, 2024</a><br>
-        <a href="UmpireReportUCHealthPark6-4-24.html">June 4, 2024</a><br>
-        <a href="UmpireReportUCHealthPark6-5-24.html">June 5, 2024</a><br>
-        <a href="UmpireReportUCHealthPark6-6-24.html">June 6, 2024</a><br>
-        <a href="UmpireReportUCHealthPark6-7-24.html">June 7, 2024</a><br>
-        <a href="UmpireReportUCHealthPark6-8-24.html">June 8, 2024</a><br>
-        <a href="UmpireReportUCHealthPark6-9-24.html">June 9, 2024</a><br>
-        <a href="UmpireReportUCHealthPark6-25-24.html">June 25, 2024</a><br>
-        <a href="UmpireReportUCHealthPark6-26-24.html">June 26, 2024</a><br>
-        <a href="UmpireReportUCHealthPark6-27-24.html">June 27, 2024</a><br>
-        <a href="UmpireReportUCHealthPark7-2-24.html">July 2, 2024</a><br>
-        <a href="UmpireReportUCHealthPark7-3-24.html">July 3, 2024</a><br>
-        <a href="UmpireReportUCHealthPark7-4-24.html">July 4, 2024</a><br>
-        <a href="UmpireReportUCHealthPark7-5-24.html">July 5, 2024</a><br>
-        <a href="UmpireReportUCHealthPark7-6-24.html">July 6, 2024</a><br>
-        <a href="UmpireReportUCHealthPark7-7-24.html">July 7, 2024</a><br>
-        <a href="UmpireReportUCHealthPark7-19-24.html">July 19, 2024</a><br>
-        <a href="UmpireReportUCHealthPark7-20-24.html">July 20, 2024</a><br>
-        <a href="UmpireReportUCHealthPark7-21-24.html">July 21, 2024</a><br>
-        <a href="UmpireReportUCHealthPark7-30-24.html">July 30, 2024</a><br>
-        <a href="UmpireReportUCHealthPark7-31-24.html">July 31, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-1-24.html">August 1, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-2-24.html">August 2, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-3-24.html">August 3, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-4-24.html">August 4, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-6-24.html">August 6, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-7-24.html">August 7, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-8-24.html">August 8, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-13-24.html">August 13, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-14-24.html">August 14, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-15-24.html">August 15, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-16-24.html">August 16, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-17-24.html">August 17, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-23-24.html">August 23, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-24-24.html">August 24, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-25-24.html">August 25, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-27-24.html">August 27, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-28-24.html">August 28, 2024</a><br>
-        <a href="UmpireReportUCHealthPark8-29-24.html">August 29, 2024</a><br>
+        <div class="month-group">
+            <div class="month-heading">May 2024</div>
+                <a href="UmpireReportUCHealthPark5-28-24.html">May 28, 2024</a><br>
+                <a href="UmpireReportUCHealthPark5-29-24.html">May 29, 2024</a><br>
+                <a href="UmpireReportUCHealthPark5-30-24.html">May 30, 2024</a><br>
+                <a href="UmpireReportUCHealthPark5-31-24.html">May 31, 2024</a><br>
+        </div>
+        <div class="month-group">
+            <div class="month-heading">June 2024</div>
+                <a href="UmpireReportUCHealthPark6-1-24.html">June 1, 2024</a><br>
+                <a href="UmpireReportUCHealthPark6-2-24.html">June 2, 2024</a><br>
+                <a href="UmpireReportUCHealthPark6-4-24.html">June 4, 2024</a><br>
+                <a href="UmpireReportUCHealthPark6-5-24.html">June 5, 2024</a><br>
+                <a href="UmpireReportUCHealthPark6-6-24.html">June 6, 2024</a><br>
+                <a href="UmpireReportUCHealthPark6-7-24.html">June 7, 2024</a><br>
+                <a href="UmpireReportUCHealthPark6-8-24.html">June 8, 2024</a><br>
+                <a href="UmpireReportUCHealthPark6-9-24.html">June 9, 2024</a><br>
+                <a href="UmpireReportUCHealthPark6-25-24.html">June 25, 2024</a><br>
+                <a href="UmpireReportUCHealthPark6-26-24.html">June 26, 2024</a><br>
+                <a href="UmpireReportUCHealthPark6-27-24.html">June 27, 2024</a><br>
+        </div>
+        <div class="month-group">
+            <div class="month-heading">July 2024</div>
+                <a href="UmpireReportUCHealthPark7-2-24.html">July 2, 2024</a><br>
+                <a href="UmpireReportUCHealthPark7-3-24.html">July 3, 2024</a><br>
+                <a href="UmpireReportUCHealthPark7-4-24.html">July 4, 2024</a><br>
+                <a href="UmpireReportUCHealthPark7-5-24.html">July 5, 2024</a><br>
+                <a href="UmpireReportUCHealthPark7-6-24.html">July 6, 2024</a><br>
+                <a href="UmpireReportUCHealthPark7-7-24.html">July 7, 2024</a><br>
+                <a href="UmpireReportUCHealthPark7-19-24.html">July 19, 2024</a><br>
+                <a href="UmpireReportUCHealthPark7-20-24.html">July 20, 2024</a><br>
+                <a href="UmpireReportUCHealthPark7-21-24.html">July 21, 2024</a><br>
+                <a href="UmpireReportUCHealthPark7-30-24.html">July 30, 2024</a><br>
+                <a href="UmpireReportUCHealthPark7-31-24.html">July 31, 2024</a><br>
+        </div>
+        <div class="month-group">
+            <div class="month-heading">August 2024</div>
+                <a href="UmpireReportUCHealthPark8-1-24.html">August 1, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-2-24.html">August 2, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-3-24.html">August 3, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-4-24.html">August 4, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-6-24.html">August 6, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-7-24.html">August 7, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-8-24.html">August 8, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-13-24.html">August 13, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-14-24.html">August 14, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-15-24.html">August 15, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-16-24.html">August 16, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-17-24.html">August 17, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-23-24.html">August 23, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-24-24.html">August 24, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-25-24.html">August 25, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-27-24.html">August 27, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-28-24.html">August 28, 2024</a><br>
+                <a href="UmpireReportUCHealthPark8-29-24.html">August 29, 2024</a><br>
+        </div>
     </div>
     <div id="content">
         <!-- Your content goes here -->
