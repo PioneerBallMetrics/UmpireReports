@@ -6,6 +6,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            overflow: hidden;
         }
         body {
             background: url('../images/PioneerBaseballLogo.jpg') no-repeat center center fixed;
@@ -19,7 +20,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            background: rgba(0, 0, 0, 0.5);
             z-index: 0;
         }
         #topBar {
@@ -27,104 +28,132 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 50px; /* Adjust height as needed */
+            height: 50px;
             background-color: #0C2340;
             z-index: 2;
-            display: flex; /* Use flexbox to align items */
-            align-items: center; /* Center items vertically */
-            padding-left: 10px; /* Add some padding on the left */
-            color: #FFFFFF; /* White text color */
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            color: #FFFFFF;
         }
-        /* Add some basic styling to the navigation menu */
         #navMenu {
-            width: 15%; /* Set the desired width */
-            height: 100vh;
-            overflow: auto;
+            width: 15%;
             position: fixed;
-            top: 50px; /* Start just below the top bar */
+            top: 50px;
             left: 0;
+            bottom: 0;
             padding: 1em;
             background-color: #5B7F95;
             z-index: 1;
-            border-right: 3px solid #AD7C59; /* Thin line separating sidebar */
+            border-right: 3px solid #AD7C59;
+            overflow-y: auto;
+            box-sizing: border-box;
         }
         #content {
-            margin-left: 18%; /* Adjust the margin to match the menu width */
+            margin-left: 17%;
             padding: 1em;
-            padding-top: 60px; /* Add space for the top bar and nav menu */
-            z-index: 1;
+            padding-top: 60px;
+            height: calc(100% - 50px);
+            overflow-y: auto;
+            box-sizing: border-box;
             position: relative;
-            color: #FFFFFF; /* Text color for content */
+            z-index: 1;
+            color: #FFFFFF;
         }
         #navMenu h2 {
-            color: #FFFFFF; /* White color for the heading */
-            margin-top: 30px; /* Adjust the margin to move it down */
+            color: #FFFFFF;
+            margin-top: 30px;
         }
         #navMenu a {
-            color: #FFFFFF; /* White color for the links */
-            text-decoration: none; /* Removes underline from links */
-            line-height: 1.5em; /* Adds some space between links */
+            color: #FFFFFF;
+            text-decoration: none;
+            line-height: 1.5em;
+            display: block;
+            margin-bottom: 5px;
         }
         #navMenu a:hover {
-            color: #B87333; /* Copper color when hovering over links, for contrast */
+            color: #B87333;
         }
         .indent {
-            margin-left: 20px; /* Adjust the indent as needed */
+            margin-left: 20px;
+        }
+        .month-group {
+            margin-bottom: 20px;
+        }
+        .month-heading {
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            color: #FFFFFF;
         }
     </style>
 </head>
 <body>
-    <div id="topBar">
-        <h1><a href="https://pioneerballmetrics.github.io/UmpireReports/index.html" style="color: #FFFFFF; text-decoration: none;">Dehler Park Reports</a></h1>
+  <div id="topBar">
+        <h1><a href="https://pioneerballmetrics.github.io/UmpireReports/index.html" style="color: #FFFFFF; text-decoration: none;">Centene Stadium Reports</a></h1>
     </div>
     <div id="navMenu">
-        <a href="UmpireReportDehlerPark5-28-24.html">May 28, 2024</a><br>
-        <a href="UmpireReportDehlerPark5-29-24.html">May 29, 2024</a><br>
-        <a href="UmpireReportDehlerPark5-30-24.html">May 30, 2024</a><br>
-        <a href="UmpireReportDehlerPark5-31-24.html">May 31, 2024</a><br>
-        <a href="UmpireReportDehlerPark6-1-24.html">June 1, 2024</a><br>
-        <a href="UmpireReportDehlerPark6-2-24.html">June 2, 2024</a><br>
-        <a href="UmpireReportDehlerPark6-18-24.html">June 18, 2024</a><br>
-        <a href="UmpireReportDehlerPark6-19-24.html">June 19, 2024</a><br>
-        <a href="UmpireReportDehlerPark6-20-24.html">June 20, 2024</a><br>
-        <a href="UmpireReportDehlerPark6-21-24.html">June 21, 2024</a><br>
-        <a href="UmpireReportDehlerPark6-22-24.html">June 22, 2024</a><br>
-        <a href="UmpireReportDehlerPark6-23-24.html">June 23, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-2-24.html">July 2, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-4-24.html">July 4, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-5-24Game1.html">July 5, 2024 Game 1</a><br>
-        <a href="UmpireReportDehlerPark7-5-24Game2.html">July 5, 2024 Game 2</a><br>
-        <a href="UmpireReportDehlerPark7-6-24.html">July 6, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-7-24.html">July 7, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-9-24.html">July 9, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-10-24.html">July 10, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-11-24.html">July 11, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-16-24.html">July 16, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-17-24.html">July 17, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-18-24.html">July 18, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-19-24.html">July 19, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-20-24.html">July 20, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-21-24.html">July 21, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-30-24.html">July 30, 2024</a><br>
-        <a href="UmpireReportDehlerPark7-31-24.html">July 31, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-1-24.html">August 1, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-2-24.html">August 2, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-3-24.html">August 3, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-4-24.html">August 4, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-14-24.html">August 14, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-15-24.html">August 15, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-16-24.html">August 16, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-17-24.html">August 17, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-18-24.html">August 18, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-20-24.html">August 20, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-21-24.html">August 21, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-22-24.html">August 22, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-23-24.html">August 23, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-24-24.html">August 24, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-25-24.html">August 25, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-30-24.html">August 30, 2024</a><br>
-        <a href="UmpireReportDehlerPark8-31-24.html">August 31, 2024</a><br>
-        <a href="UmpireReportDehlerPark9-1-24.html">September 1, 2024</a><br>
+        <div class="month-group">
+            <div class="month-heading">May 2024</div>
+                <a href="UmpireReportDehlerPark5-28-24.html">May 28, 2024</a><br>
+                <a href="UmpireReportDehlerPark5-29-24.html">May 29, 2024</a><br>
+                <a href="UmpireReportDehlerPark5-30-24.html">May 30, 2024</a><br>
+                <a href="UmpireReportDehlerPark5-31-24.html">May 31, 2024</a><br>
+        </div>
+        <div class="month-group">
+            <div class="month-heading">June 2024</div>
+                <a href="UmpireReportDehlerPark6-1-24.html">June 1, 2024</a><br>
+                <a href="UmpireReportDehlerPark6-2-24.html">June 2, 2024</a><br>
+                <a href="UmpireReportDehlerPark6-18-24.html">June 18, 2024</a><br>
+                <a href="UmpireReportDehlerPark6-19-24.html">June 19, 2024</a><br>
+                <a href="UmpireReportDehlerPark6-20-24.html">June 20, 2024</a><br>
+                <a href="UmpireReportDehlerPark6-21-24.html">June 21, 2024</a><br>
+                <a href="UmpireReportDehlerPark6-22-24.html">June 22, 2024</a><br>
+                <a href="UmpireReportDehlerPark6-23-24.html">June 23, 2024</a><br>
+        </div>
+        <div class="month-group">
+            <div class="month-heading">July 2024</div>
+                <a href="UmpireReportDehlerPark7-2-24.html">July 2, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-4-24.html">July 4, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-5-24Game1.html">July 5, 2024 Game 1</a><br>
+                <a href="UmpireReportDehlerPark7-5-24Game2.html">July 5, 2024 Game 2</a><br>
+                <a href="UmpireReportDehlerPark7-6-24.html">July 6, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-7-24.html">July 7, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-9-24.html">July 9, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-10-24.html">July 10, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-11-24.html">July 11, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-16-24.html">July 16, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-17-24.html">July 17, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-18-24.html">July 18, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-19-24.html">July 19, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-20-24.html">July 20, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-21-24.html">July 21, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-30-24.html">July 30, 2024</a><br>
+                <a href="UmpireReportDehlerPark7-31-24.html">July 31, 2024</a><br>
+        </div>
+        <div class="month-group">
+            <div class="month-heading">August 2024</div>
+                <a href="UmpireReportDehlerPark8-1-24.html">August 1, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-2-24.html">August 2, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-3-24.html">August 3, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-4-24.html">August 4, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-14-24.html">August 14, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-15-24.html">August 15, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-16-24.html">August 16, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-17-24.html">August 17, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-18-24.html">August 18, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-20-24.html">August 20, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-21-24.html">August 21, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-22-24.html">August 22, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-23-24.html">August 23, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-24-24.html">August 24, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-25-24.html">August 25, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-30-24.html">August 30, 2024</a><br>
+                <a href="UmpireReportDehlerPark8-31-24.html">August 31, 2024</a><br>
+        </div>
+        <div class="month-group">
+            <div class="month-heading">September 2024</div>
+                <a href="UmpireReportDehlerPark9-1-24.html">September 1, 2024</a><br>
 </div>
 <div id="content">
     <!-- Your content goes here -->
